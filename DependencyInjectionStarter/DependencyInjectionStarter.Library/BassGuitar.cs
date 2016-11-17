@@ -5,11 +5,14 @@ using System.Text;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class BassGuitar
+    public class BassGuitar : IInstrument
     {
-        public string PlayBassLine()
-        {
+        public string PlayBassLine() {
             return "Boooow Boooow Boooooow";
+        }
+
+        public string Play() {
+            return PlayBassLine();
         }
     }
 }
